@@ -2,16 +2,24 @@
 <div id = "App"> 
 <quick-menu :menu-count=count :icon-class=icons :menu-url-list=list :position=position :backgroundColor=backgroundColor>
 </quick-menu>
-  <table class="tg">
+<table class="tg">
   <tr>
+    <td class="tg-0lax" colspan="5" style="background-color:red; height:5ch">
+    <font-awesome-icon icon="coffee" />
+    header
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2" style="background-color:blue">left</td>
     <td class="tg-0lax" colspan="3">
-      <trend
-      :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
+    <trend
+      :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0, 0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
       :gradient="['purple', 'purple', 'purple']"
       auto-draw
       smooth>
       </trend>
     </td>
+    <td class="tg-0lax" rowspan="2" style="background-color:blue">right</td>
   </tr>
   <tr>
     <td class="tg-0lax">
@@ -19,7 +27,7 @@
         :progress="50"
         :size="200"
         :reverse="false"
-        line-cap="round"
+        line-cap="flat"
         :fill="fill1"
         empty-fill="rgba(0, 0, 0, .1)"
         :animation-start-value="0.0"
@@ -36,7 +44,7 @@
         :progress="50"
         :size="200"
         :reverse="false"
-        line-cap="round"
+        line-cap="flat"
         :fill="fill2"
         empty-fill="rgba(0, 0, 0, .1)"
         :animation-start-value="0.0"
@@ -53,7 +61,7 @@
         :progress="50"
         :size="200"
         :reverse="false"
-        line-cap="round"
+        line-cap="flat"
         :fill="fill3"
         empty-fill="rgba(0, 0, 0, .1)"
         :animation-start-value="0.0"
@@ -65,6 +73,8 @@
         @vue-circle-end="100">
       </vue-circle>
     </td>
+  <tr>
+    <td class="tg-0lax" colspan="5" style="background-color:red">bottom</td>
   </tr>
 </table>
 </div>
@@ -112,5 +122,6 @@ export default {
   .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
   .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
   .tg .tg-0lax{text-align:center;vertical-align:top; float: center;}
+  .vue-circle{float:center;}
 }
 </style>
