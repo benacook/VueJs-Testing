@@ -13,7 +13,7 @@
     <td class="tg-0lax" rowspan="2" style="background-color:#efefef"></td>
     <td class="tg-0lax" colspan="3">
     <trend
-      :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0, 0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
+      :data=mydata
       :gradient="['#55efc4', '#55efc4', 'purple']"
       auto-draw
       smooth>
@@ -107,7 +107,8 @@ export default {
       position: "bottom-right",
       fill1: { gradient: ["#d63031", "orange", "#e17055"] },
       fill2: { gradient: ["#e17055", "#0984e3", "#0984e3"] },
-      fill3: { gradient: ["#6c5ce7", "#6c5ce7", "#6c5ce7"] }
+      fill3: { gradient: ["#6c5ce7", "#6c5ce7", "#6c5ce7"] },
+      mydata: myFunct()
     };
   },
   name: "App",
@@ -117,6 +118,10 @@ export default {
     VueCircle
   }
 };
+
+function myFunct(){
+  return [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0, 0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]
+};
 </script>
 
 <style>
@@ -125,13 +130,12 @@ export default {
   padding: 0;
   height: 100%;
   width: 100%;
-  color: black;
+  color: #636e72;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: @font-size;
   background-color: #efefef;
-  height: 100%;
 }
 .tg {
   border-collapse: separate;
