@@ -4,25 +4,25 @@
 </quick-menu>
 <table class="tg">
   <tr>
-    <td class="tg-0lax" colspan="5" style="height:5ch">
-    <font-awesome-icon icon="coffee" />
-    header
+    <td class="tg-0lax" colspan="5" style="height:5ch;background-color:#efefef">
+    <font-awesome-icon icon="warehouse" />
+    Overview
     </td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2">left</td>
-    <td class="tg-0lax" colspan="3" style="background-color:white">
+    <td class="tg-0lax" rowspan="2" style="background-color:#efefef"></td>
+    <td class="tg-0lax" colspan="3">
     <trend
       :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0, 0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
-      :gradient="['purple', 'purple', 'purple']"
+      :gradient="['#55efc4', '#55efc4', 'purple']"
       auto-draw
       smooth>
       </trend>
     </td>
-    <td class="tg-0lax" rowspan="2">right</td>
+    <td class="tg-0lax" rowspan="2" style="background-color:#efefef"></td>
   </tr>
   <tr>
-    <td class="tg-0lax" style="background-color:white">
+    <td class="tg-0lax">
     <vue-circle
         :progress="50"
         :size="200"
@@ -37,11 +37,12 @@
         :show-percent="false"
         @vue-circle-progress="0"
         @vue-circle-end="100">
+        <p>50%</p>
       </vue-circle>
     </td>
-    <td class="tg-0lax" style="background-color:white">
+    <td class="tg-0lax">
     <vue-circle
-        :progress="50"
+        :progress="80"
         :size="200"
         :reverse="false"
         line-cap="flat"
@@ -54,11 +55,12 @@
         :show-percent="false"
         @vue-circle-progress="0"
         @vue-circle-end="100">
+        <p>80%</p>
       </vue-circle>
     </td>
-    <td class="tg-0lax" style="background-color:white">
+    <td class="tg-0lax">
     <vue-circle
-        :progress="50"
+        :progress="20"
         :size="200"
         :reverse="false"
         line-cap="flat"
@@ -71,10 +73,11 @@
         :show-percent="false"
         @vue-circle-progress="0"
         @vue-circle-end="100">
+        <p>20%</p>
       </vue-circle>
     </td>
   <tr>
-    <td class="tg-0lax" colspan="5">bottom</td>
+    <td class="tg-0lax" colspan="5" style="background-color:#efefef"></td>
   </tr>
 </table>
 </div>
@@ -102,9 +105,9 @@ export default {
       ],
       backgroundColor: "#1976d2",
       position: "bottom-right",
-      fill1: { gradient: ["orange", "orange", "orange"] },
-      fill2: { gradient: ["red", "red", "red"] },
-      fill3: { gradient: ["blue", "blue", "blue"] }
+      fill1: { gradient: ["#d63031", "orange", "#e17055"] },
+      fill2: { gradient: ["#e17055", "#0984e3", "#0984e3"] },
+      fill3: { gradient: ["#6c5ce7", "#6c5ce7", "#6c5ce7"] }
     };
   },
   name: "App",
@@ -132,7 +135,7 @@ export default {
 }
 .tg {
   border-collapse: separate;
-  border-radius: 25px;
+  border-radius: 0px;
   border-spacing: 10px;
 }
 .tg td {
@@ -140,7 +143,7 @@ export default {
   border-style: solid;
   border-width: 0px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 2px;
   word-break: normal;
 }
 .tg th {
