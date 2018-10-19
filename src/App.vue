@@ -4,14 +4,14 @@
 </quick-menu>
 <table class="tg">
   <tr>
-    <td class="tg-0lax" colspan="5" style="background-color:red; height:5ch">
+    <td class="tg-0lax" colspan="5" style="height:5ch">
     <font-awesome-icon icon="coffee" />
     header
     </td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2" style="background-color:blue">left</td>
-    <td class="tg-0lax" colspan="3">
+    <td class="tg-0lax" rowspan="2">left</td>
+    <td class="tg-0lax" colspan="3" style="background-color:white">
     <trend
       :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0, 0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
       :gradient="['purple', 'purple', 'purple']"
@@ -19,10 +19,10 @@
       smooth>
       </trend>
     </td>
-    <td class="tg-0lax" rowspan="2" style="background-color:blue">right</td>
+    <td class="tg-0lax" rowspan="2">right</td>
   </tr>
   <tr>
-    <td class="tg-0lax">
+    <td class="tg-0lax" style="background-color:white">
     <vue-circle
         :progress="50"
         :size="200"
@@ -39,7 +39,7 @@
         @vue-circle-end="100">
       </vue-circle>
     </td>
-    <td class="tg-0lax">
+    <td class="tg-0lax" style="background-color:white">
     <vue-circle
         :progress="50"
         :size="200"
@@ -56,7 +56,7 @@
         @vue-circle-end="100">
       </vue-circle>
     </td>
-    <td class="tg-0lax">
+    <td class="tg-0lax" style="background-color:white">
     <vue-circle
         :progress="50"
         :size="200"
@@ -74,7 +74,7 @@
       </vue-circle>
     </td>
   <tr>
-    <td class="tg-0lax" colspan="5" style="background-color:red">bottom</td>
+    <td class="tg-0lax" colspan="5">bottom</td>
   </tr>
 </table>
 </div>
@@ -82,25 +82,31 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld";
-import quickMenu from 'vue-quick-menu'
-import Vue from 'vue';
-import Trend from 'vuetrend';
-import VueCircle from 'vue2-circle-progress'
+import quickMenu from "vue-quick-menu";
+import Vue from "vue";
+import Trend from "vuetrend";
+import VueCircle from "vue2-circle-progress";
 
 Vue.use(Trend);
 
 export default {
-  data() { 
-    return { 
-      count: 4, 
+  data() {
+    return {
+      count: 4,
       icons: ["", "", "", ""],
-      list: [ { isLink: false }, { isLink: false}, { isLink: false }, { isLink: false } ],
+      list: [
+        { isLink: false },
+        { isLink: false },
+        { isLink: false },
+        { isLink: false }
+      ],
       backgroundColor: "#1976d2",
       position: "bottom-right",
-      fill1 : { gradient: ["orange", "orange", "orange"]},
-      fill2 : { gradient: ["red", "red", "red"]},
-      fill3 : { gradient: ["blue", "blue", "blue"]} };
-      },
+      fill1: { gradient: ["orange", "orange", "orange"] },
+      fill2: { gradient: ["red", "red", "red"] },
+      fill3: { gradient: ["blue", "blue", "blue"] }
+    };
+  },
   name: "App",
   components: {
     HelloWorld,
@@ -111,17 +117,46 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+#App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: @font-size;
+  background-color: #efefef;
+  height: 100%;
+}
+.tg {
+  border-collapse: separate;
+  border-radius: 25px;
+  border-spacing: 10px;
+}
+.tg td {
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 0px;
+  overflow: hidden;
+  border-radius: 5px;
+  word-break: normal;
+}
+.tg th {
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 0px;
+  overflow: hidden;
+  word-break: normal;
+}
+.tg .tg-0lax {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  .tg  {border-collapse:collapse;border-spacing:0;}
-  .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-  .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-  .tg .tg-0lax{text-align:center;vertical-align:top; float: center;}
-  .vue-circle{float:center;}
+  vertical-align: top;
+  float: center;
+  background-color: white;
+}
+vue-circle {
+  float: center;
 }
 </style>

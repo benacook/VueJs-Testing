@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faCoffee);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-Vue.component("test", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
