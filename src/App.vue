@@ -4,13 +4,17 @@
 </quick-menu>
 <table class="tg">
   <tr>
-    <td class="tg-0lax" colspan="5" style="height:5ch;background-color:#efefef">
+    <td class="tg-0lax"
+    colspan="5"
+    style="height:5ch;background-color:#efefef">
     <font-awesome-icon icon="warehouse" />
     Overview
     </td>
   </tr>
   <tr>
-    <td class="tg-0lax" rowspan="2" style="background-color:#efefef"></td>
+    <td class="tg-0lax"
+    rowspan="2"
+    style="background-color:#efefef"></td>
     <td class="tg-0lax" colspan="3">
     <trend
       :data=mydata
@@ -19,13 +23,15 @@
       smooth>
       </trend>
     </td>
-    <td class="tg-0lax" rowspan="2" style="background-color:#efefef"></td>
+    <td class="tg-0lax"
+    rowspan="2"
+    style="background-color:#efefef"></td>
   </tr>
   <tr>
     <td class="tg-0lax">
     <vue-circle
-        :progress="50"
-        :size="200"
+        :progress=50
+        :size=200
         :reverse="false"
         line-cap="flat"
         :fill="fill1"
@@ -42,8 +48,8 @@
     </td>
     <td class="tg-0lax">
     <vue-circle
-        :progress="80"
-        :size="200"
+        :progress=80
+        :size=200
         :reverse="false"
         line-cap="flat"
         :fill="fill2"
@@ -60,8 +66,8 @@
     </td>
     <td class="tg-0lax">
     <vue-circle
-        :progress="20"
-        :size="200"
+        :progress=20
+        :size=200
         :reverse="false"
         line-cap="flat"
         :fill="fill3"
@@ -77,7 +83,9 @@
       </vue-circle>
     </td>
   <tr>
-    <td class="tg-0lax" colspan="5" style="background-color:#efefef"></td>
+    <td class="tg-0lax"
+    colspan="5"
+    style="background-color:#efefef"></td>
   </tr>
 </table>
 </div>
@@ -103,7 +111,7 @@ export default {
         { isLink: false },
         { isLink: false }
       ],
-      backgroundColor: "#1976d2",
+      backgroundColor: "#4a69bd",
       position: "bottom-right",
       fill1: { gradient: ["#d63031", "orange", "#e17055"] },
       fill2: { gradient: ["#e17055", "#0984e3", "#0984e3"] },
@@ -131,7 +139,8 @@ function myFunct(){
   height: 100%;
   width: 100%;
   color: #636e72;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva,
+  Verdana, sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: @font-size;
